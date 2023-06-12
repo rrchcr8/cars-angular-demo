@@ -60,10 +60,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cars-angular-demo:build:production"
+              "browserTarget": "cars-angular-demo:build:production",
+               "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "cars-angular-demo:build:development"
+              "browserTarget": "cars-angular-demo:build:development",
+               "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +73,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cars-angular-demo:build"
+            "browserTarget": "cars-angular-demo:build",
+            "proxyConfig": "src/proxy.conf.json"
           }
         },
         "test": {
@@ -94,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9ca74c4b-dce0-4f80-af47-12f59ddae71d"
   }
 }

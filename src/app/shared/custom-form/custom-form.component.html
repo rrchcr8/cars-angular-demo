@@ -1,0 +1,13 @@
+<!-- <form #addForm="ngForm" (ngSubmit)="onAddEmloyee(addForm)"> -->
+<div>
+  <input type="text" [(ngModel)]="carName" placeholder="Car Name">
+</div>
+<div>
+  <input type="text" [(ngModel)]="carModel" placeholder="Car Model">
+</div>
+<div>
+  <input type="text" [(ngModel)]="carYear" placeholder="Car Year">
+</div>
+<button (click)="addCar(carName,carModel,carYear)">Add Car</button>
+
+<!-- </form> -->
