@@ -1,4 +1,4 @@
-<!-- <form #addForm="ngForm" (ngSubmit)="onAddEmloyee(addForm)"> -->
+
 <div>
   <input type="text" [(ngModel)]="carName" placeholder="Car Name">
 </div>
@@ -10,4 +10,10 @@
 </div>
 <button (click)="addCar(carName,carModel,carYear)">Add Car</button>
 
-<!-- </form> -->
+<div>
+  <select (change)="onSelectionChange($event)">
+    <option *ngFor="let car of cars" [value]="car.id">
+      {{ car.name}} - {{ car.model}} - {{ car.year}} 
+    </option>
+  </select>
+  </div>

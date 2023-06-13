@@ -1,0 +1,7 @@
+<div>
+<select (change)="onSelectionChange($event)">
+  <option *ngFor="let car of cars" [value]="car.name">
+    {{car.id}} {{ car.name}} - {{ car.model}} - {{ car.year}} 
+  </option>
+</select>
+</div>
